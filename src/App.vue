@@ -4,6 +4,7 @@ import Menubar from 'primevue/menubar'
 import { ref } from 'vue';
 import type { MenuItem } from 'primevue/menuitem';
 import LightDarkSwitch from '@/components/LighDarkSwich.vue';
+import BusToaster from '@/components/BusToaster.vue';
 
 const items = ref<MenuItem[]>([
   {
@@ -11,12 +12,6 @@ const items = ref<MenuItem[]>([
     icon: 'iconify mdi--home-circle',
     route: '/',
     key: 'home'
-  },
-  {
-    label: 'Fresh',
-    icon: 'iconify mdi--star-circle',
-    route: '/paged',
-    key: 'paged'
   },
   {
     label: 'About',
@@ -28,6 +23,7 @@ const items = ref<MenuItem[]>([
 </script>
 
 <template>
+  <BusToaster />
   <header class="sticky top-0 z-50">
     <Menubar :model="items">
       <template #start>

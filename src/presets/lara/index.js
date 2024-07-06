@@ -7,7 +7,7 @@ import badgedirective from './badgedirective';
 // import blockui from './blockui';
 // import breadcrumb from './breadcrumb';
 import button from './button';
-// import calendar from './calendar';
+import calendar from './calendar';
 import card from './card';
 // import carousel from './carousel';
 // import cascadeselect from './cascadeselect';
@@ -66,7 +66,7 @@ import ripple from './ripple';
 // import scrolltop from './scrolltop';
 // import selectbutton from './selectbutton';
 // import sidebar from './sidebar';
-// import skeleton from './skeleton';
+import skeleton from './skeleton';
 // import slider from './slider';
 // import speeddial from './speeddial';
 // import splitbutton from './splitbutton';
@@ -81,7 +81,7 @@ import tag from './tag';
 // import textarea from './textarea';
 // import tieredmenu from './tieredmenu';
 // import timeline from './timeline';
-// import toast from './toast';
+import toast from './toast';
 // import togglebutton from './togglebutton';
 // import toolbar from './toolbar';
 // import tooltip from './tooltip';
@@ -103,7 +103,7 @@ export default {
   dropdown,
   inputnumber,
   inputtext,
-  // calendar,
+  calendar,
   checkbox,
   // radiobutton,
   // inputswitch,
@@ -183,7 +183,7 @@ export default {
   //messages
   // message,
   // inlinemessage,
-  // toast,
+  toast,
 
   //media
   // carousel,
@@ -197,7 +197,7 @@ export default {
   tag,
   chip,
   // progressbar,
-  // skeleton,
+  skeleton,
   // scrolltop,
   // terminal,
   // blockui,

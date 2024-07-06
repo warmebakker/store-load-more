@@ -1,38 +1,38 @@
-const pageLimitDefault = 8
-const pageDefault = 1
+const pageLimitDefault = 5
+const pageDefault = 0
 
 interface PagedRequest {
-  _page: number
-  _limit: number
+  pageIndex: number
+  pageSize: number
 }
 
-const usePaginationManager = () => {
+const paginatedItemsManager = () => {
   const pageRequest: PagedRequest = {
-    _page: pageDefault,
-    _limit: pageLimitDefault,
+    pageIndex: pageDefault,
+    pageSize: pageLimitDefault,
   }
 
   const hasNextPage = (lastPageItemCount: number): boolean => {
-    return lastPageItemCount === pageRequest._limit
+    return lastPageItemCount === pageRequest.pageSize
   }
 
   const nextPage = (): PagedRequest => {
-    pageRequest._page++
+    pageRequest.pageIndex++
     return pageRequest
   }
 
   const prevPage = (): PagedRequest => {
-    pageRequest._page--
+    pageRequest.pageIndex--
     return pageRequest
   }
 
   const resetPage = (): PagedRequest => {
-    pageRequest._page = pageDefault
-    pageRequest._limit = pageLimitDefault
+    pageRequest.pageIndex = pageDefault
+    pageRequest.pageSize = pageLimitDefault
     return pageRequest
   }
 
   return { hasNextPage, nextPage, prevPage, resetPage }
 }
 
-export default usePaginationManager
+export default paginatedItemsManager

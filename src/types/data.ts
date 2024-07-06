@@ -1,14 +1,22 @@
-export interface BlogPost {
-  userId: number
-  id: number
-  title: string
-  body: string
+export interface PaginatedResponse<T> {
+  items: T[]
+  index: number
+  size: number
 }
 
-export interface Comment {
-  postId: number
+export interface SpaceObject {
   id: number
+  launchYear: Date
   name: string
-  email: string
-  body: string
+  objectiveSummary: string
+}
+
+export type Guid = string;
+
+export type UserIdentifier = {
+  key: Guid;
+};
+
+export interface UserFavorite {
+  favorite: boolean
 }
